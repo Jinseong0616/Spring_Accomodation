@@ -15,10 +15,10 @@ public class SearchDAO {
 	
 	//조건에 맞는 방 검색 - 체크인, 체크아웃, 인원수, 숙소명 OR 지역명
 	public List<SearchDTO> selectList(HashMap<String,String> map){
-		System.out.println(map.get("checkin_d"));
-		System.out.println(map.get("checkout_d"));
-		System.out.println(map.get("count"));
-		System.out.println(map.get("txt"));
+//		System.out.println(map.get("checkin_d"));
+//		System.out.println(map.get("checkout_d"));
+//		System.out.println(map.get("count"));
+//		System.out.println(map.get("txt"));
 		
 		return sqlSession.selectList("s.accommdation_list", map);
 	}

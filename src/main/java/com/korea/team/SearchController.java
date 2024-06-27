@@ -90,7 +90,7 @@ public class SearchController {
 	public String room_view(Model model, String bu_email,String bu_title, String checkin_d,String checkout_d) {
 		//System.out.println(checkin);
 		List<RoomDTO> list = room_dao.selectList(bu_email);
-		System.out.println(bu_email);
+		
 		model.addAttribute("list", list);
 		
 		model.addAttribute("bu_title",bu_title);

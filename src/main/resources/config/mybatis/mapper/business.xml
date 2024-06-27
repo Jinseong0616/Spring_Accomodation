@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 카테고리별 숙소 검색 -->
 	<select id="category" parameterType="String" resultType="business">
 		SELECT
-		DISTINCT B.*, MIN_PRICE
+		DISTINCT B.*, T.MIN_PRICE
 		FROM BUSINESS B
 		JOIN (
 		SELECT BU_EMAIL, MIN(RO_PRICE) AS MIN_PRICE

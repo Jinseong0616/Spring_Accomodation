@@ -105,10 +105,10 @@ public class BusinessController {
 	// 수정화면
 	@RequestMapping("modify_form")
 	public String modify_form(Model model, int ro_num) {
-		System.out.println(bu_email);
+		
 		// 매개변수로 넘어온 idx를 이용해 게시물 한건을 찾는다.
 		// RoomDTO dto = room_dao.selectOne(idx);
-		System.out.println(ro_num);
+		//System.out.println(ro_num);
 		RoomDTO dto = room_dao.selectOne(ro_num);
 		model.addAttribute("dto", dto);
 
@@ -159,8 +159,6 @@ public class BusinessController {
 		if (bu_email == null) { // email이 등록이 안되어 있으면 로그인이 안되어 있는 상태로 생각.
 			return MyCommon.VIEW_PATH + "business/businessTopView.jsp";
 		}
-
-		System.out.println(bu_email);
 		List<ReservationDTO> list = res_dao.selectList(bu_email);
 
 		model.addAttribute("list", list);
@@ -188,8 +186,6 @@ public class BusinessController {
 		if (bu_email == null) { // email이 등록이 안되어 있으면 로그인이 안되어 있는 상태로 생각.
 			return MyCommon.VIEW_PATH + "business/businessTopView.jsp";
 		}
-
-		System.out.println(bu_email);
 		List<ReservationDTO> list = res_dao.selectList(bu_email);
 
 		model.addAttribute("list", list);
@@ -215,8 +211,6 @@ public class BusinessController {
 		if (bu_email == null) { // email이 등록이 안되어 있으면 로그인이 안되어 있는 상태로 생각.
 			return MyCommon.VIEW_PATH + "business/businessTopView.jsp";
 		}
-
-		System.out.println(bu_email);
 		List<ReservationDTO> list = res_dao.selectList(bu_email);
 
 		model.addAttribute("list", list);
@@ -327,7 +321,7 @@ public class BusinessController {
 		webPath = String.format("%s/%s/", webPath, dto.getRo_name());
 		String savePath = request.getServletContext().getRealPath(webPath);
 
-		System.out.println(savePath);
+		//System.out.println(savePath);
 
 		int picCount = dto.getPicture_count(); // 3
 
@@ -388,7 +382,7 @@ public class BusinessController {
 		webPath = String.format("%s/%s/", webPath, dto.getBu_title());
 		String savePath = request.getServletContext().getRealPath(webPath);
 
-		System.out.println(savePath);
+		//System.out.println(savePath);
 
 		int picCount = dto.getPicture_count();
 

@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<form action="reservation_operator" method="post">
-
 <jsp:include page="/WEB-INF/views/main/header.jsp"></jsp:include>
+
+<form action="reservation_operator" method="post">
 
 <input type="hidden" name="m_email" value="${m_email.m_email}">
 <input type="hidden" name="bu_title" value="${bu_title}">
@@ -122,8 +122,7 @@
 						<span>${dto.ro_price}원</span>
 					</div>
 					<div class="btn">
-						<button>${dto.ro_price}원 결제하기</button>
-						${m_email.m_email}로 로그인됨
+						<button type="submit">${dto.ro_price}원 결제하기</button>
 					</div>
 				</div>
 			</div>

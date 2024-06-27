@@ -30,23 +30,23 @@ public class IndexController {
 		return MyCommon.VIEW_PATH + "main/index.jsp";
 	}
 
-	// ·Î±×ÀÎ ¹æ¹ý ¼±ÅÃ
+	// ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@RequestMapping("login_form")
 	public String login_form() {
 		return MyCommon.VIEW_PATH + "member/login_form.jsp";
 	}
 
-	// ÀÌ¸ÞÀÏ·Î ½ÃÀÛÇÏ±â ¼±ÅÃ
+	// ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@RequestMapping("login_email")
 	public String login_form_user() {
-		System.out.println("ÀÌ¸ÞÀÏ·Î±×ÀÎ");
+		
 		return MyCommon.VIEW_PATH + "member/login_form_user.jsp";
 	}
 
-	// ºñÁî´Ï½º ·Î±×ÀÎ
+	// ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½
 	@RequestMapping("login_business")
 	public String login_form_business() {
-		System.out.println("ºñÁî´Ï½º ·Î±×ÀÎ");
+		
 		return MyCommon.VIEW_PATH + "business/login_form_business.jsp";
 	}
 	

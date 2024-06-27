@@ -30,7 +30,7 @@ public class ReservationController {
 	final ReservationDAO reservation_dao;
 	
 	
-	//°´½Ç ¿¹¾à ÆäÀÌÁö
+	//ì˜ˆì•½ íŽ˜ì´ì§€
 	@RequestMapping("reservation_form_member")
 	public String reservation_form_member(Model model,int ro_num,String bu_title,String checkin_d,String checkout_d) {
 		RoomDTO dto = room_dao.selectOne(ro_num);
@@ -45,28 +45,27 @@ public class ReservationController {
 	}
 	
 	
-	//¿¹¾àÇÏ±â ±â´É
+	//ì˜ˆì•½ê¸°ëŠ¥
 	@RequestMapping("reservation_operator")
 	public String reservation(ReservationDTO dto) {
 
-//		dto.setCheckin_date(checkin_d);
-//		dto.setCheckout_date(checkout_d);
-		dto.setStatus("°áÁ¦ ¿Ï·á");
-		
+		//dto.setCheckin_date(checkin_date);
+		//dto.setCheckout_date(checkout_date);
+		dto.setStatus("ì˜ˆì•½ì™„ë£Œ");
+		System.out.println("ì˜ˆì•½í•˜ê¸° ë²„íŠ¼ ëˆ„ë¦„");
 		
 		
 		int res = reservation_dao.add(dto);
 
 		if (res > 0) {
-			System.out.println("¿Ï·á");
 			return "redirect:index";
 		}
 
-		return null;
+		return "ë²„íŠ¼ ì˜¤ë¥˜";
 	}
 	
 	
-	//¸â¹ö ¿¹¾à ³»¿ª
+	//ì˜ˆì•½ ë‚´ì—­
 	@RequestMapping("rev_list")
 	public String select(Model model, String m_email) {
 		

@@ -44,14 +44,14 @@
 							</div>
 						</button>
 
-						<button class="btn email-login" onclick="location.href='login_email';">
+						<button type="button" class="btn email-login" onclick="location.href='login_email';">
 							<div class="btn_content">
 								<i class="bi bi-envelope-fill"></i>								
 								<span>이메일로 시작하기</span>
 							</div>
 						</button>
 
-						<button class="btn business-login"  onclick="location.href='login_business';">
+						<button type="button" class="btn business-login"  onclick="location.href='login_business';">
 							<div class="btn_content">								
 								<span>비즈니스 로그인/회원가입</span>
 							</div>
